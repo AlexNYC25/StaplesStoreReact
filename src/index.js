@@ -4,8 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import NavBar from './components/Navbar/NavBar'
+
 ReactDOM.render(
   <React.StrictMode>
+    <NavBar />
     <App />
     <p>Test statment</p>
   </React.StrictMode>,
