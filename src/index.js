@@ -11,6 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
 
     <NavBar />
+    
     <App />
     <p>Test statment</p>
   </React.StrictMode>,
