@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 
 import NavBar from './components/NavBar/NavBar'
 
-ReactDOM.render(/
+ReactDOM.render(
   <React.StrictMode>
 
     <NavBar />
