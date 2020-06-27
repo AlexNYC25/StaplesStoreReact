@@ -6,13 +6,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import NavBar from './components/NavBar/NavBar'
+import HomePage from './components/HomePage/HomePage'
 
 ReactDOM.render(
   <React.StrictMode>
 
     <NavBar />
 
-    <App />
+    <HomePage />
     <p>Test statment</p>
   </React.StrictMode>,
   document.getElementById('root')
