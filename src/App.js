@@ -8,13 +8,14 @@ import HomePage from './components/HomePage/HomePage'
 function App() {
   return (
     <div className="App">
-      
+      <Router>
         <Switch>
           <Route path="/">
             <HomePage />
           </Route>
 
         </Switch>
+      </Router>
         
     </div>
   );
