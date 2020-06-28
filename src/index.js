@@ -12,10 +12,11 @@ import Footer from './components/Footer/Footer'
 ReactDOM.render(
   <React.StrictMode>
 
-    <NavBar />
+  <NavBar />
 
+  <App />
 
-    <Footer />
+  <Footer />
 
 
   </React.StrictMode>,
