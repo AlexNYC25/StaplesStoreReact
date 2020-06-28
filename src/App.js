@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Router } from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
 
@@ -8,9 +8,11 @@ import HomePage from './components/HomePage/HomePage'
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Route exact path='/' component={HomePage} />
-      </Switch>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+        </Switch>
+      </Router>
     </div>
   );
 }
