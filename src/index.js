@@ -14,7 +14,6 @@ ReactDOM.render(
 
     <NavBar />
 
-    <App />
 
     <Footer />
 
