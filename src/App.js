@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Router } from 'react-router-dom'
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
 
@@ -10,9 +10,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/">
-            <HomePage />
-          </Route>
+          <Route path="/" component={HomePage} />
 
         </Switch>
       </Router>
