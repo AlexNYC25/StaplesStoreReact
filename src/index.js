@@ -14,7 +14,7 @@ ReactDOM.render(
 
     <NavBar />
 
-    <HomePage />
+    <App />
 
     <Footer />
 
