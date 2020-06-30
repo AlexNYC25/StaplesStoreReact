@@ -5,20 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import NavBar from './components/NavBar/NavBar'
-import HomePage from './components/HomePage/HomePage'
-import Footer from './components/Footer/Footer'
 
 ReactDOM.render(
   <React.StrictMode>
-
-  <NavBar />
-
-  <App />
-
-  <Footer />
-
-
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
