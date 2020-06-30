@@ -9,7 +9,7 @@ class HomePage extends React.Component {
     render(){
         return (
             <div className="App">
-                
+                <p>Search for items</p>
                 <ProductLayout/>
             </div>
         );
