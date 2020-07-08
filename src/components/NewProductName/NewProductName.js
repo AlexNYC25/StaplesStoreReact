@@ -48,7 +48,7 @@ class NewProductName extends React.Component {
         this.setState({new_id: '', new_name: ''})
 
 
-        fetch('http://localhost:8080/products/rename', requestOptions)
+        fetch('https://staplesbacendapi.herokuapp.com/products/rename', requestOptions)
             .then(response => response.json())
             .then(data => this.setState({message : data.message}))
 

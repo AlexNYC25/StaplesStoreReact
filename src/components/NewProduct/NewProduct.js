@@ -48,7 +48,7 @@ class NewProduct extends React.Component {
         // reset form values
         this.setState({new_id: '', new_name: ''})
 
-        fetch('http://localhost:8080/products/add', requestOptions)
+        fetch('https://staplesbacendapi.herokuapp.com/products/add', requestOptions)
             .then(response => response.json())
             .then(data => this.setState({message: data.message}))
         

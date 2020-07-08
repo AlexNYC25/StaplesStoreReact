@@ -51,7 +51,7 @@ class NewProductImage extends React.Component {
             body: formData
         }
 
-        fetch('http://localhost:8080/products/images', requestOptions)
+        fetch('https://staplesbacendapi.herokuapp.com/products/images', requestOptions)
             .then(response => response.json())
             .then(data => this.setState({message: data.message}))
 

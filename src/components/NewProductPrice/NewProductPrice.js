@@ -42,7 +42,7 @@ class NewProductPrice extends React.Component {
 
         this.setState({new_id:'', new_price:''})
 
-        fetch('http://localhost:8080/products/price', requestOptions)
+        fetch('https://staplesbacendapi.herokuapp.com/products/price', requestOptions)
             .then(response => response.json())
             .then(data => this.setState({message: data.message}))
 

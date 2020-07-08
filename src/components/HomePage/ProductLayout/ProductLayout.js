@@ -44,7 +44,7 @@ class ProductLayout extends React.Component{
  	async componentDidMount(){
 
 		if(this.state.value === ''){
-			let link = "http://localhost:8080/allProducts";
+			let link = "https://staplesbacendapi.herokuapp.com/allProducts";
 			fetch(link)
 				.then(response => response.json())
 				.then(data => this.setState({info: data, counter:10}))
@@ -52,7 +52,7 @@ class ProductLayout extends React.Component{
 			
 		}
 		else{
-			let link = "http://localhost:8080/"
+			let link = "https://staplesbacendapi.herokuapp.com/"
 			link = link.concat(this.state.value)
 			fetch(link)
 				.then(response => response.json())
