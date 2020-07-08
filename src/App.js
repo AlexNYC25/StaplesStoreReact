@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer'
 
 import HomePage from './components/HomePage/HomePage'
 import DataManipulation from './components/DataMainpulation/DataManipulation'
+import ProductPage from './components/ProductPage/ProductPage'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 		<Switch>
 			<Route exact path="/" component={HomePage} />
 			<Route path="/DataManipulation" component={DataManipulation} />
+			<Route path="/Product/" component={ProductPage} />
 
 		</Switch>
 		<Footer />
