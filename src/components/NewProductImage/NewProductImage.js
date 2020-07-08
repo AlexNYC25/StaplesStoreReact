@@ -93,7 +93,7 @@ class NewProductImage extends React.Component {
                                 enctype="multipart/form-data"
                                 
 
-                                //value={this.state.img_data}
+                                value={this.state.img_data}
                                 onChange={this.handleImageUpload}
                             />
                         <Button
