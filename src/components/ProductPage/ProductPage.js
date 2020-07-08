@@ -18,8 +18,13 @@ class ProductPage extends React.Component {
             link = link.concat(this.state.id);
 
             fetch(link)
+                .then(res => res.text())
+                .then(text => console.log(text))
+
+            /*
                 .then(response => response.json())
                 .then(data => this.setState({productInfo: data[0], productImages:data[0].images}))
+            */
 
     }
 
