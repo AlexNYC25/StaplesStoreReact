@@ -15,7 +15,7 @@ class ProductPage extends React.Component {
 
     async componentDidMount() {
             let link = "https://staplesreactpage.herokuapp.com/item/"
-            link = link.concat(this.state.id);
+            link = link.concat(this.props.match.params.id);
 
             fetch(link)
                 .then(res => res.text())
