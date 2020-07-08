@@ -14,7 +14,7 @@ class ProductPage extends React.Component {
 
 
     async componentDidMount() {
-            let link = "http://localhost:8080/item/"
+            let link = "https://staplesreactpage.herokuapp.com/item/"
             link = link.concat(this.state.id);
 
             fetch(link)
