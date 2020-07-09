@@ -39,6 +39,14 @@ class NewProductImage extends React.Component {
         event.preventDefault();
         let returnData =  null;
 
+        let tempData = {
+            "base64String" : this.state.base64,
+            "new_id" : this.state.new_id,
+            "fileName": this.state.originalName
+        }
+
+
+
         let formData = new FormData();
         formData.append('productImage', this.state.img_data)
         formData.append('base64String', this.state.base64)
@@ -48,7 +56,11 @@ class NewProductImage extends React.Component {
 
         let requestOptions = {
             method: 'POST',
-            body: formData
+            headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: JSON.stringify(tempData)
         }
 
         console.log(requestOptions)
