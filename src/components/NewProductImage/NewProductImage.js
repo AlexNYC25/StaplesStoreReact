@@ -46,14 +46,6 @@ class NewProductImage extends React.Component {
         }
 
 
-
-        let formData = new FormData();
-        formData.append('productImage', this.state.img_data)
-        formData.append('base64String', this.state.base64)
-        formData.append('new_id', this.state.new_id)
-        formData.append('fileName', this.state.originalName)
-
-
         let requestOptions = {
             method: 'POST',
             headers: {
