@@ -35,17 +35,20 @@ class NewProductImage extends React.Component {
         }
 
         try{
-            const compressedFile = await imageCompression(file, options);
-            console.log(compressedFile)
-            let reader = new FileReader();
-            reader.readAsDataURL(compressedFile);
-            reader.onloadend = () => {
-                this.setState({
-                    img_data: file,
-                    base64: reader.result,
-                    fileName: file.name
+            imageCompression(file, options)
+                .then( function(compressedFile) {
+                    console.log(compressedFile)
+                let reader = new FileReader();
+                reader.readAsDataURL(compressedFile);
+                reader.onloadend = () => {
+                    this.setState({
+                        img_data: file,
+                        base64: reader.result,
+                        fileName: file.name
+                    })
+                }
                 })
-            }
+            
 
         }
         catch (error){
