@@ -3,6 +3,9 @@ import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import Input from '@material-ui/core/Input'
 
+import imageCompression from 'browser-image-compression';
+
+
 
 class NewProductImage extends React.Component {
     constructor(props){
@@ -22,17 +25,33 @@ class NewProductImage extends React.Component {
         }
     }
 
-    handleImageUpload(event){
+    async handleImageUpload(event){
         let file = event.target.files[0];
-        let reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onloadend = () => {
-            this.setState({
-                img_data: file,
-                base64: reader.result,
-                fileName: file.name
-            })
+
+        const options = {
+            maxSizeMb: 0.1,
+            maxWidthOrHeight: 1920,
+            useWebWorker: true
         }
+
+        try{
+            const compressedFile = await imageCompression(file, options);
+            let reader = new FileReader();
+            reader.readAsDataURL(compressedFile);
+            reader.onloadend = () => {
+                this.setState({
+                    img_data: file,
+                    base64: reader.result,
+                    fileName: file.name
+                })
+            }
+
+        }
+        catch (error){
+            console.log(error);
+        }
+
+        
     }
 
     handleSubmit(event){
