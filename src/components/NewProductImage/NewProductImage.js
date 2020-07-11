@@ -29,7 +29,7 @@ class NewProductImage extends React.Component {
         let file = event.target.files[0];
 
         const options = {
-            maxSizeMb: 0.1,
+            maxSizeMb: 0.05,
             maxWidthOrHeight: 1920,
             useWebWorker: true
         }
