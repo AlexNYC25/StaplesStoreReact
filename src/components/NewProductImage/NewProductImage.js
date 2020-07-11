@@ -50,7 +50,6 @@ class NewProductImage extends React.Component {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded',
             },
             body: JSON.stringify(tempData)
         }
@@ -58,13 +57,9 @@ class NewProductImage extends React.Component {
         console.log(requestOptions)
 
         fetch('https://staplesbacendapi.herokuapp.com/products/images', requestOptions)
-            .then(response=> response.text())
-            .then(data => console.log(data))
-
-        /*
             .then(response => response.json())
             .then(data => this.setState({message: data.message}))
-        */
+        
 
         if(returnData != null){
             this.setState({message: returnData})
