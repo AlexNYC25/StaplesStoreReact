@@ -36,6 +36,7 @@ class NewProductImage extends React.Component {
 
         try{
             const compressedFile = await imageCompression(file, options);
+            console.log(compressedFile)
             let reader = new FileReader();
             reader.readAsDataURL(compressedFile);
             reader.onloadend = () => {
