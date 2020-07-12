@@ -26,6 +26,7 @@ class NewProductImage extends React.Component {
     }
 
     async handleImageUpload(event){
+        this.setState({img: event.target.files[0]})
         let file = event.target.files[0];
 
         const options = {
@@ -85,7 +86,7 @@ class NewProductImage extends React.Component {
             this.setState({message: returnData})
         }
 
-        this.setState({ new_id:null, img_data:null, base64:null })
+        this.setState({ new_id:null, img_data:null, base64:null, img:null })
     }
 
     render(){
@@ -114,7 +115,7 @@ class NewProductImage extends React.Component {
                                 enctype="multipart/form-data"
                                 
 
-                                //value={this.state.img_data}
+                                value={this.state.img}
                                 onChange={this.handleImageUpload}
                             />
                         <Button
