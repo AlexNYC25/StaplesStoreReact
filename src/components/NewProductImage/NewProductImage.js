@@ -10,7 +10,7 @@ import imageCompression from 'browser-image-compression';
 class NewProductImage extends React.Component {
     constructor(props){
         super(props)
-        this.state = {message:'', new_id:null, img_data:null, base64:null, originalName:null}
+        this.state = {message:'', new_id:null, img_data:null, base64:null, img:null}
 
         this.handleImageUpload = this.handleImageUpload.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -85,7 +85,7 @@ class NewProductImage extends React.Component {
             this.setState({message: returnData})
         }
 
-        this.setState({ new_id:null, img_data:null, base64:null, originalName: null})
+        this.setState({ new_id:null, img_data:null, base64:null })
     }
 
     render(){
@@ -132,7 +132,13 @@ class NewProductImage extends React.Component {
                         </Button>
                     </div>
 
+                    
+
                 </form>
+
+                    <div>
+                        {this.state.message}
+                    </div>
 
             </div>
 
