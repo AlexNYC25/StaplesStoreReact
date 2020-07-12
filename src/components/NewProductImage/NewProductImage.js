@@ -26,7 +26,6 @@ class NewProductImage extends React.Component {
     }
 
     async handleImageUpload(event){
-        this.setState({img: event.target.files[0]})
         let file = event.target.files[0];
 
         const options = {
@@ -53,6 +52,7 @@ class NewProductImage extends React.Component {
             console.log(error);
         }
 
+        event.target.value = ''
         
     }
 
