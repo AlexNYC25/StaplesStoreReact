@@ -17,6 +17,10 @@ class NewProductImage extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
+    clearForm(){
+        document.getElementById("image-form").reset();
+    }
+
     handleIDChange(event){
         this.setState({
             new_id: event.target.value
@@ -86,6 +90,8 @@ class NewProductImage extends React.Component {
         }
 
         this.setState({ new_id:null, img_data:null, base64:null, img:null })
+
+        this.clearForm();
     }
 
     render(){
@@ -94,7 +100,7 @@ class NewProductImage extends React.Component {
                 <form  className='data-options container' enctype="multipart/form-data">
                     <h2>Add an image to a product</h2>
                     <div className='row'>
-                        <form>
+                        <form id="image-form">
                             <div className="form-group">
                                 <input 
                                     type="text" 
