@@ -95,6 +95,31 @@ class NewProductImage extends React.Component {
                 <form  className='data-options container' enctype="multipart/form-data">
                     <h2>Add an image to a product</h2>
                     <div className='row'>
+                        <form>
+                            <div className="form-group">
+                                <input 
+                                    type="text" 
+                                    className="col-4 "
+                                    placeholder="Product ID"
+                                    value={this.state.new_id}
+                                ></input>
+
+                                <input 
+                                    type="file" 
+                                    className="col-4"
+                                    onChange={this.handleImageUpload}
+                                ></input>
+
+                                <button 
+                                    type="submit"
+                                    className="col-2"
+                                    value="Submit"
+                                    onClick={this.handleSubmit}
+                                >
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
                         <TextField
                             required
                             name='product-id'
