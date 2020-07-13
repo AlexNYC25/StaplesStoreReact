@@ -120,42 +120,8 @@ class NewProductImage extends React.Component {
                                 </button>
                             </div>
                         </form>
-                        <TextField
-                            required
-                            name='product-id'
-                            label='Product ID'
-                            type='number'
-                            variant='outlined'
-                            className='col-4'
-
-                            value={this.state.new_id}
-                            onChange={this.handleChange}
-                        />
-                            <Input
-                                required
-                                name='productImage'
-                                color='primary' 
-                                type='file' 
-                                id='fileSelector'
-                                enctype="multipart/form-data"
-                                
-
-                                value={this.state.img}
-                                onChange={this.handleImageUpload}
-                            />
-                        <Button
-                            variant='contained'
-                            color='primary'
-                            size='medium'
-                            className='col-2 ml-0'
-                            type='submit'
-                            value='Submit'
-
-                            onClick={this.handleSubmit}
-
-                        >
-                            Submit Location
-                        </Button>
+                        
+                        
                     </div>
 
                     
