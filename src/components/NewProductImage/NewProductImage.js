@@ -101,7 +101,6 @@ class NewProductImage extends React.Component {
                                     type="text" 
                                     className="col-4 "
                                     placeholder="Product ID"
-                                    value={this.state.new_id}
 
                                     onChange={this.handleChange}
                                 ></input>
