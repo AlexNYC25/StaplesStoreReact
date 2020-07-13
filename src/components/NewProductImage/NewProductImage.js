@@ -13,7 +13,7 @@ class NewProductImage extends React.Component {
         this.state = {message:'', new_id:null, img_data:null, base64:null, img:null}
 
         this.handleImageUpload = this.handleImageUpload.bind(this)
-        this.handleChange = this.handleChange.bind(this)
+        this.handleIDChange = this.handleIDChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
