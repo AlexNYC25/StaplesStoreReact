@@ -17,12 +17,11 @@ class NewProductImage extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-    handleChange(event){
-        if(event.target.name === 'product-id'){
-            this.setState({
-                new_id: event.target.value
-            })
-        }
+    handleIDChange(event){
+        this.setState({
+            new_id: event.target.value
+        })
+        
     }
 
     async handleImageUpload(event){
@@ -102,7 +101,7 @@ class NewProductImage extends React.Component {
                                     className="col-4 "
                                     placeholder="Product ID"
 
-                                    onChange={this.handleChange}
+                                    onChange={this.handleIDChange}
                                 ></input>
 
                                 <input 
