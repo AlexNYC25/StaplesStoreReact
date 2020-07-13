@@ -55,8 +55,6 @@ class NewProductImage extends React.Component {
             console.log(error);
         }
 
-        event.target.value = ''
-        
     }
 
     handleSubmit(event){
