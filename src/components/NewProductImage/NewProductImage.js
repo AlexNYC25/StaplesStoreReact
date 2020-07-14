@@ -102,7 +102,7 @@ class NewProductImage extends React.Component {
                             <div className="form-group">
                                 <input 
                                     type="text" 
-                                    className="col-4 "
+                                    className="col-5 form-control"
                                     placeholder="Product ID"
 
                                     onChange={this.handleIDChange}
@@ -110,13 +110,13 @@ class NewProductImage extends React.Component {
 
                                 <input 
                                     type="file" 
-                                    className="col-4"
+                                    className="col-5 custom-file-input"
                                     onChange={this.handleImageUpload}
                                 ></input>
 
                                 <button 
                                     type="submit"
-                                    className="col-2"
+                                    className="col-2 btn btn-primary"
                                     value="Submit"
                                     onClick={this.handleSubmit}
                                 >
