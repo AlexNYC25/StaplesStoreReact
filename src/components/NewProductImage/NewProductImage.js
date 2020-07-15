@@ -110,7 +110,7 @@ class NewProductImage extends React.Component {
 
                                 <input 
                                     type="file" 
-                                    className="col-5 custom-file-input"
+                                    className="col-5"
                                     onChange={this.handleImageUpload}
                                 ></input>
 
