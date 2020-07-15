@@ -48,7 +48,7 @@ class ProductCarousel extends React.Component{
                 >
                     {
                         this.props.Images
-                            ?this.props.Images.map(img => <img width="300px" height="150px" alt={img.name} src={img}></img>)
+                            ?this.props.Images.map(img => <img alt={img.name} src={img}></img>)
                             : <img  src='https://media.giphy.com/media/hEc4k5pN17GZq/giphy.gif' alt="Theres nothing here"/>
                     }
                 </Carousel>
