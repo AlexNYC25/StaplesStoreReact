@@ -59,7 +59,6 @@ class NewProductImage extends React.Component {
 
     handleSubmit(event){
         event.preventDefault();
-        let returnData =  null;
 
         let tempData = {
             "base64String" : this.state.base64,
@@ -83,26 +82,23 @@ class NewProductImage extends React.Component {
             .then(data => this.setState({message: data.message}))
         
 
-        if(returnData != null){
-            this.setState({message: returnData})
-        }
-
+        // reset state values
         this.setState({ new_id:null, img_data:null, base64:null, img:null })
 
+        // reset actual html form
         this.clearForm();
     }
 
     render(){
         return (
             <div className='new-data'>
-                <form  className='data-options container' enctype="multipart/form-data">
+                <form id="image-form"  className='data-options container' enctype="multipart/form-data">
                     <h2>Add an image to a product</h2>
                     <div className='row'>
-                        <form id="image-form">
-                            <div className="form-group">
+                            <div className="form-group ">
                                 <input 
                                     type="text" 
-                                    className="col-5 form-control"
+                                    className="col-lg-5 "
                                     placeholder="Product ID"
 
                                     onChange={this.handleIDChange}
@@ -110,21 +106,19 @@ class NewProductImage extends React.Component {
 
                                 <input 
                                     type="file" 
-                                    className="col-5"
+                                    className="col-lg-5"
                                     onChange={this.handleImageUpload}
                                 ></input>
 
                                 <button 
                                     type="submit"
-                                    className="col-2 btn btn-primary"
+                                    className="col-lg-2 btn btn-primary"
                                     value="Submit"
                                     onClick={this.handleSubmit}
                                 >
                                     Submit
                                 </button>
                             </div>
-                        </form>
-                        
                         
                     </div>
 
