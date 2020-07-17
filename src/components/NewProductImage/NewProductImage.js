@@ -1,8 +1,6 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
-import TextField from '@material-ui/core/TextField'
-import Input from '@material-ui/core/Input'
 
+// image compression library for easing server load
 import imageCompression from 'browser-image-compression';
 
 
