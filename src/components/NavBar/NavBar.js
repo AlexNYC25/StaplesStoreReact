@@ -17,7 +17,7 @@ class Navbar extends React.Component{
                             All Items
                         </Link>
                         <a className="p-2" href="/">Displays</a>
-                        <a className="p-2" href="/">Github</a>
+                        <a className="p-2" href="https://github.com/AlexNYC25/StaplesStoreReact">Github</a>
                         <Link to="/DataManipulation">
                             Data Control Panel
                         </Link>
