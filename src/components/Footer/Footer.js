@@ -2,9 +2,9 @@ import React from 'react';
 
 function Footer() {
     return(
-        <footer class="page-footer font-small blue pt-4 footer">
-            <div class="container-fluid text-center text-md-left">
-                <div class="row">
+        <footer id="app-footer" class="page-footer font-small blue pt-4 footer">
+            <div class="container-fluid text-center text-md-left footer-links">
+                <div class="row footer-links">
                     <div class="col-md-6 mt-md-0 mt-3">
                         <h5 class="text-uppercase">About</h5>
                         <p>A little info about the page</p>
