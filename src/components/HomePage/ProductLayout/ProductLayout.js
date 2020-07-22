@@ -78,7 +78,7 @@ class ProductLayout extends React.Component{
 					<div className="row">
 				  		{this.state.info.slice(0, this.state.counter).map(info => (
 							<div className="col-md-4">
-								<div className="card mb-4 shadow-sm">
+								<div className="card mb-4 shadow-sm product-card">
 									<img className=" card-img-top" width="100%" height="100%" aria-label="Placeholder: Thumbnail" alt="thumbnail"
 										src=
 										{
